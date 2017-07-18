@@ -20,7 +20,7 @@ public class Main {
         if (piece.frozen == true){
             System.out.println("test passed, frozen changed successfully to true");
         } else {
-            System.out.println("test failed");
+            System.out.println("test failed, frozen is equal to false");
         }
 
         piece.move(5, 8);
@@ -36,10 +36,12 @@ public class Main {
 
         if (piece.frozen == false) {
             System.out.println("test passed, frozen successfully changed back to false");
+        } else {
+            System.out.println("test failed, frozen is equal to true");
         }
 
         piece.move(4, 5);
-        
+
         if(piece.positionX == 4 && piece.positionY == 5) {
             System.out.println("position x is 4, and position y is 5 as expected");
         } else {
